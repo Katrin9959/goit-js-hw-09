@@ -8,7 +8,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 // Get element date input, start btn, data: days, hours, min, sec
 let getRef = selector => document.querySelector(selector);
-const inputDatePickerRef = getRef('#dateTime-picker');
+const inputDatePickerRef = getRef('#datetime-picker');
 const btnStartRef = getRef('[data-start]');
 const daysRef = getRef('[data-days]');
 const hoursRef = getRef('[data-hours]');
