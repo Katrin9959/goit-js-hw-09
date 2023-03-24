@@ -8,7 +8,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 // Get element date input, start btn, data: days, hours, min, sec
 let getRef = selector => document.querySelector(selector);
-const imputDatePickerRef = getRef('#datetime-picker');
+const inputDatePickerRef = getRef('#datetime-picker');
 const btnStartRef = getRef('[data-start]');
 const daysRef = getRef('[data-days]');
 const hoursRef = getRef('[data-hours]');
@@ -34,7 +34,7 @@ const options = {
 btnStartRef.setAttribute('disabled', true);
 
 // Initial flatpickr
-flatpickr(imputDatePickerRef, options);
+flatpickr(inputDatePickerRef, options);
 
 // Set click event listener on button start
 btnStartRef.addEventListener('click', onBtnStart);
@@ -43,7 +43,7 @@ window.addEventListener('keydown', e => {
   if (e.code === 'Escape' && timerId) {
     clearInterval(timerId);
 
-    imputDatePickerRef.removeAttribute('disabled');
+    inputDatePickerRef.removeAttribute('disabled');
     btnStartRef.setAttribute('disabled', true);
 
     secondsRef.textContent = '00';
@@ -77,7 +77,7 @@ function currentDifferenceDate(selectedDates) {
 //Timer
 function startTimer() {
   btnStartRef.setAttribute('disabled', true);
-  imputDatePickerRef.setAttribute('disabled', true);
+  inputDatePickerRef.setAttribute('disabled', true);
 
   timeDifference -= 1000;
 
