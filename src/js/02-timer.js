@@ -39,19 +39,20 @@ flatpickr(inputDatePickerRef, options);
 // Set click event listener on button start
 btnStartRef.addEventListener('click', onBtnStart);
 // Reset timer on btn
-window.addEventListener('keydown', e => {
-  if (e.code === 'Escape' && timerId) {
-    clearInterval(timerId);
 
-    inputDatePickerRef.removeAttribute('disabled');
-    btnStartRef.setAttribute('disabled', true);
+// window.addEventListener('keydown', e => {
+//   if (e.code === 'Escape' && timerId) {
+//     clearInterval(timerId);
 
-    secondsRef.textContent = '00';
-    minutesRef.textContent = '00';
-    hoursRef.textContent = '00';
-    daysRef.textContent = '00';
-  }
-});
+//     inputDatePickerRef.removeAttribute('disabled');
+//     btnStartRef.setAttribute('disabled', true);
+
+//     secondsRef.textContent = '00';
+//     minutesRef.textContent = '00';
+//     hoursRef.textContent = '00';
+//     daysRef.textContent = '00';
+//   }
+// });
 
 // Start timer
 function onBtnStart() {
